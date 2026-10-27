@@ -1,6 +1,9 @@
 package com.example.lepokedex;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +12,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    Spinner spinnerActivityMain;
+    Button btnFiltrar;
+    Button btnNuevoPokemon;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

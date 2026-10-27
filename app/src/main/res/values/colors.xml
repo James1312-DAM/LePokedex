@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="morado">#673AB7</color>
+    <color name="rojo">#AF0000</color>
+    <color name="verde">#4CAF50</color>
+    <color name="rosa">#FF00AB</color>
+    <color name="fondofuego">#95FF0000</color>
+    <color name="fondoagua">#9603A9F4</color>
+    <color name="fondoelectrico">#B7FFEB3B</color>
+    <color name="fondolucha">#B2FF5722</color>
+    <color name="fondoplanta">#A98BC34A</color>
+    <color name="fondoveneno">#909C27B0</color>
+
 </resources>
