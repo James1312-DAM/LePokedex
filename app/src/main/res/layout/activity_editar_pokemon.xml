@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_crear_pokemon">
+    tools:context=".Activities.Activity_crear_pokemon">
 
     <TextView
         android:id="@+id/textView2"
@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/textView3"
@@ -32,81 +32,22 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.025" />
-
-    <TextView
-        android:id="@+id/tvNombre2"
-        android:layout_width="320dp"
-        android:layout_height="27dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.028" />
-
-    <TextView
-        android:id="@+id/tvHP2"
-        android:layout_width="320dp"
-        android:layout_height="27dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombre2"
-        app:layout_constraintVertical_bias="0.031" />
-
-    <TextView
-        android:id="@+id/tvAtaque2"
-        android:layout_width="320dp"
-        android:layout_height="27dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHP2"
-        app:layout_constraintVertical_bias="0.036" />
-
-    <TextView
-        android:id="@+id/tvVelocidad2"
-        android:layout_width="320dp"
-        android:layout_height="27dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAtaque2"
-        app:layout_constraintVertical_bias="0.045" />
-
-    <TextView
-        android:id="@+id/tvDefensa2"
-        android:layout_width="320dp"
-        android:layout_height="27dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvVelocidad2"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.054" />
 
     <Spinner
         android:id="@+id/spinnerEditar"
         android:layout_width="362dp"
         android:layout_height="41dp"
+        android:layout_marginBottom="236dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDefensa2"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintTop_toBottomOf="@+id/ptDefensa"
+        app:layout_constraintVertical_bias="0.76" />
 
     <Button
         android:id="@+id/btGuardar2"
@@ -119,7 +60,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btVolver2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerEditar"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintVertical_bias="0.963" />
 
     <Button
         android:id="@+id/btVolver2"
@@ -131,5 +72,71 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btGuardar2"
         app:layout_constraintTop_toBottomOf="@+id/spinnerEditar"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintVertical_bias="0.963" />
+
+    <EditText
+        android:id="@+id/ptNombre"
+        android:layout_width="297dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <EditText
+        android:id="@+id/ptHp"
+        android:layout_width="297dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="HP"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ptNombre"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <EditText
+        android:id="@+id/ptAtaque"
+        android:layout_width="297dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Ataque"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ptHp"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <EditText
+        android:id="@+id/ptVelocidad"
+        android:layout_width="297dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Velocidad"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ptAtaque"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <EditText
+        android:id="@+id/ptDefensa"
+        android:layout_width="297dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Defensa"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ptVelocidad"
+        app:layout_constraintVertical_bias="0.046" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
