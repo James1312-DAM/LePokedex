@@ -1,4 +1,4 @@
-package com.example.lepokedex;
+package com.example.lepokedex.Activities;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.lepokedex.R;
 
 public class Activity_editar_pokemon extends AppCompatActivity {
 

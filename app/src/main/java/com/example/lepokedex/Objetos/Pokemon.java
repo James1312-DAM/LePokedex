@@ -1,4 +1,4 @@
-package com.example.lepokedex;
+package com.example.lepokedex.Objetos;
 
 import java.io.Serializable;
 
