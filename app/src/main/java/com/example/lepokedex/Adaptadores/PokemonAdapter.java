@@ -49,7 +49,7 @@ public class PokemonAdapter extends ArrayAdapter<Pokemon> {
         tvDefensa.setTextColor(ContextCompat.getColor(getContext(), R.color.verde));
         tvVelocidad.setTextColor(ContextCompat.getColor(getContext(), R.color.rosa));
 
-        // 6. Color de fondo de la fila según el tipo (definidos en colors.xml)
+        // Color de fondo de la fila según el tipo (definidos en colors.xml)
         switch (p.getTipo().toLowerCase()) {
 
             case "agua":
