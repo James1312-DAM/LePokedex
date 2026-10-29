@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        PokemonDatos.cargarPokemon();
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -59,12 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Crear los tipos del Spinner
         ArrayList<String> tipos = new ArrayList<>();
-        tipos.add("agua");
-        tipos.add("electrico");
-        tipos.add("fuego");
-        tipos.add("lucha");
-        tipos.add("planta");
-        tipos.add("veneno");
+        tipos.add("Agua");
+        tipos.add("Electrico");
+        tipos.add("Fuego");
+        tipos.add("Lucha");
+        tipos.add("Planta");
+        tipos.add("Veneno");
 
         // Configurar Spinner
         ArrayAdapter<String> adapterSpinner = new ArrayAdapter<>(
@@ -118,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Pokemon pokemonSeleccionado = listaFiltrada.get(position);
-        Intent intent = new Intent(MainActivity.this, Activity_editar_pokemon.class);
+        Intent intent = new Intent(MainActivity.this, Activity_ver_pokemon.class);
         intent.putExtra("pokemon", pokemonSeleccionado);
         startActivity(intent);
     }

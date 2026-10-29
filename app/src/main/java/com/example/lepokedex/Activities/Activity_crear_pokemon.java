@@ -2,12 +2,14 @@ package com.example.lepokedex.Activities;
 
 import static com.example.lepokedex.Datos.PokemonDatos.listaPokemon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -51,8 +53,8 @@ public class Activity_crear_pokemon extends AppCompatActivity implements View.On
 
         // Cargar los tipos en el Spinner
         String[] tipos = {
-                "agua", "electrico", "fuego",
-                "lucha", "planta", "veneno"
+                "Agua", "Electrico", "Fuego",
+                "Lucha", "Planta", "Veneno"
         };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
@@ -67,6 +69,7 @@ public class Activity_crear_pokemon extends AppCompatActivity implements View.On
         spinnerCrear.setAdapter(adapter);
 
         btGuardar3.setOnClickListener(this);
+        btVolver3.setOnClickListener(this);
     }
 
     @Override
@@ -79,17 +82,23 @@ public class Activity_crear_pokemon extends AppCompatActivity implements View.On
             String velocidadTexto = ptVelocidad2.getText().toString();
             String tipo = spinnerCrear.getSelectedItem().toString();
 
+            if (nombre.isEmpty() || hpTexto.isEmpty() || ataqueTexto.isEmpty()
+                    || defensaTexto.isEmpty() || velocidadTexto.isEmpty()) {
+                Toast.makeText(this, "Debes rellenar todos los campos", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
             int hp = Integer.parseInt(hpTexto);
             int ataque = Integer.parseInt(ataqueTexto);
             int defensa = Integer.parseInt(defensaTexto);
             int velocidad = Integer.parseInt(velocidadTexto);
 
-            // Calcular un ID nuevo
-            int id = listaPokemon.size() + 1;
-
-            Pokemon p = new Pokemon(id,nombre,hp,ataque,defensa,velocidad,tipo);
-
-            listaPokemon.add(p);
+            // Crear con ID automático
+            PokemonDatos.agregarPokemon(nombre, hp, ataque, defensa, velocidad, tipo);
+            Toast.makeText(this, "Pokémon creado correctamente", Toast.LENGTH_SHORT).show();
+        }
+        if (btVolver3.isPressed()) {
+            startActivity(new Intent(Activity_crear_pokemon.this, MainActivity.class));
         }
     }
 }

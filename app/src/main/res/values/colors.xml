@@ -13,4 +13,6 @@
     <color name="fondoplanta">#A98BC34A</color>
     <color name="fondoveneno">#909C27B0</color>
 
+    <color name="rojo_pokedex">#DC0A2D</color>
+    <color name="fondo_pokedex">#FAFAFA</color>
 </resources>

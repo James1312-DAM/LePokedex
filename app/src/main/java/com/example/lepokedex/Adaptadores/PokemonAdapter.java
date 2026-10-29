@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
+
 import com.example.lepokedex.Objetos.Pokemon;
 import com.example.lepokedex.R;
 
@@ -41,39 +43,41 @@ public class PokemonAdapter extends ArrayAdapter<Pokemon> {
         tvVelocidad.setText(String.valueOf(p.getVelocidad()));
         tvNombre.setText(String.valueOf(p.getNombre()));
 
-        tvHp.setTextColor(Color.parseColor("#800080"));       // Morado
-        tvAtaque.setTextColor(Color.RED);                     // Rojo
-        tvDefensa.setTextColor(Color.GREEN);                 // Verde
-        tvVelocidad.setTextColor(Color.parseColor("#FF69B4")); // Rosa
+        // Colores de los números (definidos en colors.xml)
+        tvHp.setTextColor(ContextCompat.getColor(getContext(), R.color.morado));
+        tvAtaque.setTextColor(ContextCompat.getColor(getContext(), R.color.rojo));
+        tvDefensa.setTextColor(ContextCompat.getColor(getContext(), R.color.verde));
+        tvVelocidad.setTextColor(ContextCompat.getColor(getContext(), R.color.rosa));
 
+        // 6. Color de fondo de la fila según el tipo (definidos en colors.xml)
         switch (p.getTipo().toLowerCase()) {
 
             case "agua":
-                convertView.setBackgroundColor(Color.parseColor("#81D4FA"));
+                convertView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.fondoagua));
                 break;
 
             case "electrico":
-                convertView.setBackgroundColor(Color.parseColor("#FFF176"));
+                convertView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.fondoelectrico));
                 break;
 
             case "fuego":
-                convertView.setBackgroundColor(Color.parseColor("#FFAB91"));
+                convertView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.fondofuego));
                 break;
 
             case "lucha":
-                convertView.setBackgroundColor(Color.parseColor("#D7CCC8"));
+                convertView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.fondolucha));
                 break;
 
             case "planta":
-                convertView.setBackgroundColor(Color.parseColor("#A5D6A7"));
+                convertView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.fondoplanta));
                 break;
 
             case "veneno":
-                convertView.setBackgroundColor(Color.parseColor("#CE93D8"));
+                convertView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.fondoveneno));
                 break;
 
             default:
-                convertView.setBackgroundColor(Color.WHITE);
+                convertView.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.white));
                 break;
         }
 

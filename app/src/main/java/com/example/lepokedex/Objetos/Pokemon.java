@@ -81,4 +81,18 @@ public class Pokemon implements Serializable {
     public String toString() {
         return "Tipo: "+tipo;
     }
+
+    // Dos Pokémon pueden tener el mismo id porque java busca por referencia asi asi nos aseguramos de buscar bien como en acceso a datos
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pokemon otro = (Pokemon) o;
+        return id == otro.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(id);
+    }
 }

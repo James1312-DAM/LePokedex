@@ -11,8 +11,7 @@ public class PokemonDatos {
 
     public static void cargarPokemon() {
 
-        listaPokemon.clear();
-
+        if (listaPokemon.isEmpty()) {
         listaPokemon.add(new Pokemon(1, "Bulbasaur", 45, 49, 49, 45, "planta"));
         listaPokemon.add(new Pokemon(2, "Ivysaur", 60, 62, 63, 60, "planta"));
         listaPokemon.add(new Pokemon(3, "Venusaur", 80, 82, 83, 80, "planta"));
@@ -36,5 +35,36 @@ public class PokemonDatos {
         listaPokemon.add(new Pokemon(16, "Ekans", 35, 60, 44, 55, "veneno"));
         listaPokemon.add(new Pokemon(17, "Koffing", 40, 65, 95, 35, "veneno"));
         listaPokemon.add(new Pokemon(18, "Grimer", 80, 80, 50, 25, "veneno"));
+        }
+    }
+    // Busca un Pokémon por su id (devuelve null si no existe)
+    public static Pokemon buscarPorId(int id) {
+        for (Pokemon p : listaPokemon) {
+            if (p.getId() == id) {
+                return p;
+            }
+        }
+        return null;
+    }
+
+    // Añade un Pokémon con ID automático
+    public static void agregarPokemon(String nombre, int hp, int ataque, int defensa, int velocidad, String tipo) {
+        int nuevoId = 1;
+        boolean idLibre = false;
+
+        while (!idLibre) {
+            idLibre = true;
+            for (Pokemon p : listaPokemon) {
+                if (p.getId() == nuevoId) {
+                    nuevoId++;
+                    idLibre = false;
+                    break;
+                }
+            }
+        }
+        if(idLibre){
+            Pokemon p = new Pokemon(nuevoId, nombre, hp, ataque, defensa, velocidad, tipo);
+            listaPokemon.add(p);
+        }
     }
 }

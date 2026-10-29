@@ -13,6 +13,7 @@
         android:layout_height="43dp"
         android:text="Le Pokedex"
         android:textAlignment="center"
+        android:textColor="@color/rojo"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +21,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.065" />
 
     <TextView
         android:id="@+id/textView3"
@@ -30,53 +31,30 @@
         android:text="Editar Pokemon"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.054" />
+        app:layout_constraintVertical_bias="0.055" />
 
     <Spinner
         android:id="@+id/spinnerEditar"
-        android:layout_width="362dp"
+        android:layout_width="200dp"
         android:layout_height="41dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="236dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ptDefensa"
-        app:layout_constraintVertical_bias="0.76" />
-
-    <Button
-        android:id="@+id/btGuardar2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="42dp"
-        android:text="Guardar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btVolver2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerEditar"
-        app:layout_constraintVertical_bias="0.963" />
-
-    <Button
-        android:id="@+id/btVolver2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="70dp"
-        android:text="Volver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btGuardar2"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerEditar"
-        app:layout_constraintVertical_bias="0.963" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/ptNombre"
-        android:layout_width="297dp"
+        android:layout_width="200dp"
         android:layout_height="47dp"
         android:ems="10"
         android:hint="Nombre"
@@ -89,11 +67,11 @@
 
     <EditText
         android:id="@+id/ptHp"
-        android:layout_width="297dp"
+        android:layout_width="200dp"
         android:layout_height="47dp"
         android:ems="10"
         android:hint="HP"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,11 +80,11 @@
 
     <EditText
         android:id="@+id/ptAtaque"
-        android:layout_width="297dp"
+        android:layout_width="200dp"
         android:layout_height="47dp"
         android:ems="10"
         android:hint="Ataque"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,11 +93,11 @@
 
     <EditText
         android:id="@+id/ptVelocidad"
-        android:layout_width="297dp"
+        android:layout_width="200dp"
         android:layout_height="47dp"
         android:ems="10"
         android:hint="Velocidad"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -128,15 +106,114 @@
 
     <EditText
         android:id="@+id/ptDefensa"
-        android:layout_width="297dp"
+        android:layout_width="200dp"
         android:layout_height="47dp"
         android:ems="10"
         android:hint="Defensa"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ptVelocidad"
         app:layout_constraintVertical_bias="0.046" />
+
+    <TextView
+        android:id="@+id/tvEtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Nombre:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ptNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ptNombre" />
+
+    <TextView
+        android:id="@+id/tvEtHp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="HP:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ptHp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ptHp" />
+
+    <TextView
+        android:id="@+id/tvEtAtaque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Ataque:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ptAtaque"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ptAtaque" />
+
+    <TextView
+        android:id="@+id/tvEtVelocidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Velocidad:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ptVelocidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ptVelocidad" />
+
+    <TextView
+        android:id="@+id/tvEtDefensa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Defensa:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ptDefensa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ptDefensa" />
+
+    <TextView
+        android:id="@+id/tvEtTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Tipo:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerEditar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinnerEditar" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEditar"
+        app:layout_constraintVertical_bias="0.202">
+
+        <Button
+            android:id="@+id/btGuardar2"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="Guardar" />
+
+        <Button
+            android:id="@+id/btVolver2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volver" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
